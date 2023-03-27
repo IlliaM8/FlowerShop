@@ -34,7 +34,7 @@ const products: IProduct[] = [
   },
   {
     name: "лучший день",
-    img: "https://picsum.photos/350/450",
+    img: "https://pawdawdicsum.photos/350/450",
     price: 150,
   },
 ];

@@ -8,6 +8,7 @@ import { Link } from "react-router-dom";
 interface CatalogueProps {}
 
 export const Catalogue: FC<CatalogueProps> = () => {
+  document.title = "Каталог";
   return (
     <div className="catalogue">
       <div className="catalogue__container">

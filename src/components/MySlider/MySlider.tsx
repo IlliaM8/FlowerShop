@@ -33,9 +33,9 @@ const products: IProduct[] = [
     price: 150,
   },
   {
-    name: "лучший день",
+    name: "лучший деawdнь",
     img: "https://pawdawdicsum.photos/350/450",
-    price: 150,
+    price: 1500,
   },
 ];
 

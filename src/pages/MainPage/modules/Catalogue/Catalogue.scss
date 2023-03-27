@@ -1,0 +1,124 @@
+@import "styles/style.scss";
+.catalogue {
+  background-color: $black;
+
+  .catalogue__container {
+    position: relative;
+    font-family: "Oswald";
+    font-style: normal;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 26px;
+    letter-spacing: 0.04em;
+    color: #ffffff;
+
+    .back__decor:first-child {
+      position: absolute;
+      left: -220px;
+      z-index: 1;
+    }
+    .back__decor:nth-child(2) {
+      position: absolute;
+      right: -220px;
+      z-index: 1;
+    }
+    .catalogue__backword {
+      position: absolute;
+      z-index: 0;
+      font-weight: 700;
+      font-size: 200px;
+      line-height: 296px;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: #0a1717;
+    }
+    .catalogue__backword.f {
+      top: 100px;
+      right: -200px;
+    }
+    .catalogue__backword.s {
+      top: 350px;
+      left: -200px;
+    }
+    .catalogue__backword.t {
+      top: 600px;
+      right: -200px;
+    }
+    .catalogue__col {
+      display: flex;
+      flex-direction: column;
+      z-index: 1;
+      margin: 100px 0 220px 0;
+      &:last-child {
+        gap: 30px;
+      }
+      .catalogue__title {
+        font-family: "Cormorant";
+
+        text-transform: uppercase;
+        margin-bottom: 10px;
+      }
+      .catalogue__text {
+        width: 550px;
+        margin-bottom: 80px;
+        margin-left: 90px;
+        span {
+          display: block;
+          margin-top: 30px;
+        }
+      }
+      .catalogue__plate.last {
+        margin-left: -70px;
+      }
+      .catalogue__plate {
+        position: relative;
+        width: 540px;
+        &:nth-child(1) {
+          width: 445px;
+          margin-top: 130px;
+          margin-left: 30px;
+        }
+        .catalogue__plate-cont {
+          padding: 30px;
+
+          .plate__title {
+            font-weight: 700;
+            font-size: 30px;
+            line-height: 44px;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+            color: $teel;
+            margin-bottom: 10px;
+          }
+          .plate__list {
+            font-size: 20px;
+            line-height: 26px;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+            margin-bottom: 42px;
+          }
+          .plate__list li {
+            list-style: inside;
+          }
+          .plate__link {
+            position: absolute;
+            right: 30px;
+            bottom: 30px;
+            justify-self: flex-end;
+            color: white;
+            font-weight: 700;
+            font-size: 12px;
+            line-height: 18px;
+            letter-spacing: 0.1em;
+            text-decoration-line: underline;
+            text-transform: uppercase;
+            &:hover {
+              text-decoration-line: underline;
+              color: $pink;
+            }
+          }
+        }
+      }
+    }
+  }
+}

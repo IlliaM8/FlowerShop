@@ -1,0 +1,84 @@
+@import "styles/style.scss";
+.loverFlover {
+  height: 100%;
+  background: url("../../assets/background.png") center / cover no-repeat;
+  .loverFlower__container {
+    flex-direction: column;
+    text-align: center;
+    position: relative;
+    .loverFlower__title {
+      font-family: "Cormorant";
+      font-style: normal;
+      font-weight: 300;
+      font-size: 200px;
+      line-height: 200px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+
+      color: #ffffff;
+      margin-top: 90px;
+    }
+    .loverFlower__subtitle {
+      font-family: "Oswald";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 30px;
+
+      text-align: center;
+      letter-spacing: 0.02em;
+
+      color: #ffffff;
+      margin-bottom: 47px;
+    }
+    .btn {
+      margin-bottom: 650px;
+    }
+    .loverFlower__col {
+      position: absolute;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      top: 20px;
+      right: 20px;
+      text-align: right;
+      li {
+        margin-bottom: 26px;
+      }
+      .loverFlower__contacts-title {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 21px;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: $teel;
+      }
+      .loverFlower__contacts-text {
+        font-weight: 300;
+        font-size: 10px;
+        line-height: 15px;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: white;
+      }
+      .loverFlower__social {
+        width: 60px;
+        .loverFlower__social-links {
+          height: 100%;
+          padding: 20px;
+        }
+      }
+      .loverFlower__phone {
+        margin-top: 184px;
+        p:first-child {
+          margin-bottom: 7px;
+        }
+      }
+      .loverFlower__phone-box {
+        display: flex;
+        gap: 6px;
+        padding: 10px;
+      }
+    }
+  }
+}

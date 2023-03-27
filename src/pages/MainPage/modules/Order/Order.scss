@@ -1,0 +1,18 @@
+@import "styles/style.scss";
+.order {
+  background: $black;
+  .order__container {
+    position: relative;
+    .order__title {
+      color: white;
+      span {
+        display: block;
+      }
+    }
+    .order__back {
+      position: absolute;
+      left: -210px;
+      top: 30px;
+    }
+  }
+}

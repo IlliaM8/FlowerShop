@@ -1,0 +1,26 @@
+@import "./reset";
+@import url("https://fonts.googleapis.com/css2?family=Cormorant:wght@300;400&family=Oswald:wght@200;300;400;700&family=Roboto+Condensed&display=swap");
+$black: #040a0a;
+$teel: #43ffd2;
+$darkPink: #7d2253;
+$pink: #d978ac;
+body {
+  font-family: "Oswald", sans-serif;
+}
+#root {
+  position: relative;
+}
+[class*="__container"] {
+  max-width: calc(1070px + 40px);
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+}
+[class*="__title"] {
+  font-family: "Cormorant";
+  font-weight: 400;
+  font-size: 100px;
+  line-height: 121px;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}

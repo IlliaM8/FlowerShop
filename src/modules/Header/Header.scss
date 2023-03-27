@@ -1,0 +1,9 @@
+.header {
+  width: 100%;
+  position: absolute;
+  z-index: 1231;
+  .header__container {
+    align-items: center;
+    gap: 50px;
+  }
+}

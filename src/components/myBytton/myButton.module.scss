@@ -1,0 +1,53 @@
+@import "styles/style.scss";
+.button {
+  width: 100%;
+  height: 100%;
+  font-family: "Oswald";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 18px;
+  text-align: center;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  transition: all 0.5s ease;
+}
+.button.primary {
+  background-color: $teel;
+  &:hover {
+    background-color: $darkPink;
+  }
+  &:focus {
+    background-color: $teel;
+  }
+  &:active {
+    box-shadow: inset 0px 0px 10px #1b000e;
+    background-color: $darkPink;
+  }
+
+  &:disabled {
+    color: #555555;
+    border: 1px solid #555555;
+    background-color: transparent;
+  }
+}
+.button.secondary {
+  background-color: transparent;
+  border: 0.5px solid #ffffff;
+  color: white;
+  &:hover {
+    background-color: $teel;
+    border: none;
+  }
+
+  &:active {
+    background-color: $teel;
+    border: none;
+    box-shadow: inset 0px 0px 10px #01281f;
+  }
+  &:disabled {
+    color: #555555;
+    border: 0.5px solid #555555;
+    background-color: transparent;
+  }
+}

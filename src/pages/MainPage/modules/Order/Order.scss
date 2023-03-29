@@ -1,18 +1,125 @@
 @import "styles/style.scss";
 .order {
+  position: relative;
   background: $black;
+  .order__back {
+    position: absolute;
+    top: 30px;
+    left: 0;
+  }
   .order__container {
+    flex-direction: column;
     position: relative;
     .order__title {
       color: white;
+      margin-bottom: 65px;
       span {
         display: block;
       }
     }
-    .order__back {
-      position: absolute;
-      left: -210px;
-      top: 30px;
+
+    .order__steps {
+      max-width: 620px;
+      display: flex;
+      align-self: flex-end;
+      color: white;
+      text-transform: uppercase;
+      gap: 133px;
+      margin-right: 106px;
+      margin-bottom: 160px;
+      .order__culum {
+        display: flex;
+        position: relative;
+        flex-direction: column;
+        gap: 40px;
+        &:first-child::before {
+          position: absolute;
+          top: -44px;
+          content: "";
+          width: 65px;
+          height: 10px;
+          background: #d978ac;
+        }
+        &:last-child:before {
+          position: absolute;
+          top: 0px;
+          right: -106px;
+          content: "";
+          width: 1px;
+          height: 437px;
+          background: #d978ac;
+        }
+        .order__step {
+          .order__sub {
+            margin-bottom: 12px;
+            font-weight: 700;
+            font-size: 30px;
+            line-height: 44px;
+            color: #d978ac;
+          }
+          .order__text {
+            line-height: 21px;
+          }
+        }
+      }
+    }
+    .special {
+      position: relative;
+      .special__title {
+        position: relative;
+
+        color: white;
+        margin-bottom: 65px;
+        width: 750px;
+        margin-bottom: 30px;
+        &::after {
+          content: "";
+          position: absolute;
+          bottom: 60px;
+
+          left: 85px;
+          width: 255px;
+          height: 1px;
+          background-color: #d978ac;
+          z-index: 1000;
+        }
+        span {
+          display: block;
+          text-align: end;
+        }
+      }
+      .special__img {
+        position: absolute;
+        top: 0;
+        right: 0;
+        &:nth-child(3) {
+          top: 253px;
+        }
+      }
+      .special__list {
+        max-width: 255px;
+        margin-left: 95px;
+        display: flex;
+        flex-direction: column;
+        color: #ffffff;
+        text-transform: uppercase;
+        line-height: 21px;
+        div {
+          margin-bottom: 40px;
+        }
+        li {
+          list-style: inside;
+          &:not(:nth-child(4)) {
+            margin-bottom: 25px;
+          }
+        }
+        .special__link {
+          width: 255px;
+          height: 50px;
+          margin-top: 40px;
+          margin-bottom: 160px;
+        }
+      }
     }
   }
 }

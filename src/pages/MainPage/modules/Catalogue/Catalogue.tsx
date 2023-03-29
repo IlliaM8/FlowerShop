@@ -1,8 +1,8 @@
 import { BlockWrapper } from "components/BlockWrapper";
 import { FC } from "react";
 import "./Catalogue.scss";
-import pink from "./assets/pink.svg";
-import green from "./assets/green.svg";
+import pink from "./assets/pink.png";
+import green from "./assets/green.png";
 import { Link } from "react-router-dom";
 
 interface CatalogueProps {}

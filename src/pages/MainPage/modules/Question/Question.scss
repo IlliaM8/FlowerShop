@@ -1,0 +1,117 @@
+.question {
+  position: relative;
+  background: #0f2222;
+  padding: 20px 0 0 0;
+  .question__branch {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: 1;
+  }
+  .question__container {
+    position: relative;
+    gap: 33px;
+    .question__cul {
+      width: 100%;
+      display: flex;
+      justify-content: flex-start;
+      flex-direction: column;
+      align-items: flex-end;
+      margin-bottom: 52px;
+
+      .question__title {
+        display: block;
+        position: relative;
+        max-width: 640px;
+        line-height: 100px;
+        text-transform: uppercase;
+        margin-bottom: 5px;
+        color: white;
+        margin-bottom: 421px;
+        z-index: 123123;
+        span {
+          display: block;
+          text-align: end;
+          margin-left: 100px;
+          z-index: 23;
+        }
+      }
+      .question__text {
+        position: relative;
+        margin-top: 100px;
+        max-width: 255px;
+        text-transform: uppercase;
+        line-height: 21px;
+        color: #ffffff;
+        margin-bottom: 30px;
+        &::before {
+          position: absolute;
+          content: "";
+          width: 255px;
+          height: 1px;
+          background: #43ffd2;
+          top: -53px;
+        }
+      }
+    }
+
+    .question__dec-p {
+      position: absolute;
+      top: -180px;
+      left: -300px;
+      z-index: 0;
+    }
+    .question__dec-gr {
+      position: absolute;
+      top: -50px;
+      left: -20px;
+      z-index: 0;
+    }
+  }
+}
+.inst {
+  padding: 261px 0 100px 165px;
+  background: #040a0a;
+
+  .inst__container {
+    z-index: 1;
+    justify-content: space-between;
+    align-items: end;
+    .inst__row {
+      display: flex;
+      gap: 30px;
+      position: relative;
+      gap: 30px;
+      img {
+        z-index: 1231;
+      }
+      .inst__photo-back {
+        position: absolute;
+        font-weight: 700;
+        font-size: 200px;
+        line-height: 296px;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+        color: #0a1717;
+        left: -290px;
+        top: -30px;
+      }
+      &::before {
+        position: absolute;
+        content: "awda";
+        width: 350px;
+        height: 1px;
+        right: -400px;
+        background: #43ffd2;
+      }
+    }
+    .inst__links {
+      width: 180px;
+      height: 40px;
+    }
+    .inst__deck {
+      position: absolute;
+      z-index: 0;
+    }
+  }
+}

@@ -49,7 +49,10 @@ export const Popular: FC<PopularProps> = () => {
           <h1 className="popular__title">Букеты</h1>
         </div>
         <p className="popular__text">Самые любимые композиции наших клиентов</p>
-        <MySlider />
+        <div>
+          <MySlider />
+        </div>
+
         <Link className="popular__link" to="/">
           <p>смотреть весь каталог</p>
           <svg

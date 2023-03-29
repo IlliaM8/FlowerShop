@@ -11,15 +11,18 @@
     line-height: 26px;
     letter-spacing: 0.04em;
     color: #ffffff;
+    z-index: 0;
 
     .back__decor:first-child {
       position: absolute;
-      left: -220px;
+      left: -420px;
+      top: 150px;
       z-index: 1;
     }
     .back__decor:nth-child(2) {
       position: absolute;
-      right: -220px;
+      right: -420px;
+      top: 100px;
       z-index: 1;
     }
     .catalogue__backword {

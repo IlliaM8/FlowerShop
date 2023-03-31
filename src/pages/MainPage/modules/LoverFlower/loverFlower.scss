@@ -6,6 +6,7 @@
     flex-direction: column;
     text-align: center;
     position: relative;
+    align-items: center;
     .loverFlower__title {
       font-family: "Cormorant";
       font-style: normal;
@@ -31,8 +32,10 @@
       color: #ffffff;
       margin-bottom: 47px;
     }
-    .btn {
+    .loverFlower__button {
       margin-bottom: 650px;
+      width: 220px;
+      height: 50px;
     }
     .loverFlower__col {
       position: absolute;

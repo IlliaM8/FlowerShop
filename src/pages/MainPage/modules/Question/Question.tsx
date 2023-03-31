@@ -8,36 +8,47 @@ import ph1 from "./Assets/1.png";
 import ph2 from "./Assets/2.png";
 import ph3 from "./Assets/3.png";
 import ph4 from "./Assets/4.png";
-import greenL from "./Assets/greenLS.png";
-import greenC from "./Assets/greenLr.png";
-import pinkR from "./Assets/pinkR.png";
+import { motion } from "framer-motion";
+
 import { SocialMediaLinks } from "components/SocialMediaLinks";
+import { plateAnim } from "animation";
 
-interface QustionProps {}
-
-export const Question: FC<QustionProps> = () => {
+export const Question: FC = () => {
   return (
     <>
-      <div className="question">
+      <motion.div
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        className="question"
+      >
         <img className="question__branch" src={branch} alt="branch" />
         <div className="question__container">
           <img className="question__dec-p" src={pink} alt="pink" />
           <img className="question__dec-gr" src={green} alt="green" />
           <div className="question__cul">
-            <h1 className="question__title">
+            <motion.h1
+              custom={{ y: -300, delay: 1 }}
+              variants={plateAnim}
+              className="question__title"
+            >
               остались <span>вопросы?</span>
-            </h1>
+            </motion.h1>
           </div>
           <div className="question__cul">
-            <div className="question__text">
+            <motion.div
+              custom={{ x: 300, delay: 2 }}
+              variants={plateAnim}
+              className="question__text"
+            >
               Отправьте ваш вопрос, заказ, предложение или жалобу через форму
               обратной связи, и наш специалист свяжется с вами в течение 15
               минут.
-            </div>
+            </motion.div>
             <Form />
           </div>
         </div>
-      </div>
+      </motion.div>
       <div className="inst">
         <div className="inst__container">
           <div className="inst__row">

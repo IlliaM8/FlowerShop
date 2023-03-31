@@ -76,6 +76,8 @@
       .catalogue__plate {
         position: relative;
         width: 540px;
+        backdrop-filter: blur(10px);
+
         &:nth-child(1) {
           width: 445px;
           margin-top: 130px;
@@ -85,6 +87,8 @@
           padding: 30px;
 
           .plate__title {
+            font-family: "Oswald";
+            font-style: normal;
             font-weight: 700;
             font-size: 30px;
             line-height: 44px;

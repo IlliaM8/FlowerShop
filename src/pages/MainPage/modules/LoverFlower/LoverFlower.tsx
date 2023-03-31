@@ -4,9 +4,13 @@ import { SocialMediaLinks } from "components/SocialMediaLinks";
 import { FC } from "react";
 import "./loverFlower.scss";
 import phone from "assets/phone.svg";
-interface LoverFlowerProps {}
+import MyButton from "components/myBytton/myButton";
+import { useAppSelector } from "store/hooks";
 
-export const LoverFlower: FC<LoverFlowerProps> = () => {
+export const LoverFlower: FC = () => {
+  const ref = useAppSelector((state) => state.mainPage.ref);
+  const scrol = () => ref.scrollIntoView();
+
   return (
     <div className="loverFlover">
       <div className="loverFlower__container">
@@ -16,7 +20,11 @@ export const LoverFlower: FC<LoverFlowerProps> = () => {
         <p className="loverFlower__subtitle">
           Создаём для тех, кто ценит свежесть и изящество цветка
         </p>
-        <button className="btn"></button>
+        <div className="loverFlower__button">
+          <MyButton onClick={scrol} primary as="button">
+            смотреть каталог
+          </MyButton>
+        </div>
         <ul className="loverFlower__col ">
           <li>
             <h5 className="loverFlower__contacts-title ">

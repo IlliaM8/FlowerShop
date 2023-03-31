@@ -7,51 +7,43 @@ import { Link } from "react-router-dom";
 import back from "./assets/back.png";
 import green from "./assets/green.svg";
 import pink from "./assets/pink.svg";
+import { plateAnim } from "animation";
+import { motion } from "framer-motion";
 
-interface PopularProps {}
-
-const products: IProduct[] = [
-  {
-    name: "лучший день",
-    img: img,
-    price: 150,
-  },
-  {
-    name: "лучший день",
-    img: img,
-    price: 150,
-  },
-  {
-    name: "лучший день",
-    img: img,
-    price: 150,
-  },
-  {
-    name: "лучший день",
-    img: img,
-    price: 150,
-  },
-  {
-    name: "лучший день",
-    img: img,
-    price: 150,
-  },
-];
-export const Popular: FC<PopularProps> = () => {
+export const Popular: FC = () => {
   return (
-    <div className="popular">
+    <motion.div
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true }}
+      className="popular"
+    >
       <div className="popular__container">
         <img className="popular__back" src={back} alt="popular__back" />
         <img className="popular__pink" src={pink} alt="popular__pink" />
         <img className="popular__green" src={green} alt="popular__green" />
-        <div className="popular__title-box">
+        <motion.div
+          custom={{ y: -300, delay: 1 }}
+          variants={plateAnim}
+          className="popular__title-box"
+        >
           <h1 className="popular__title">Популярные</h1>
           <h1 className="popular__title">Букеты</h1>
-        </div>
-        <p className="popular__text">Самые любимые композиции наших клиентов</p>
-        <div>
+        </motion.div>
+        <motion.p
+          custom={{ y: -300, delay: 2 }}
+          variants={plateAnim}
+          className="popular__text"
+        >
+          Самые любимые композиции наших клиентов
+        </motion.p>
+        <motion.div
+          custom={{ y: 1000, delay: 4 }}
+          variants={plateAnim}
+          className="popular__text"
+        >
           <MySlider />
-        </div>
+        </motion.div>
 
         <Link className="popular__link" to="/">
           <p>смотреть весь каталог</p>
@@ -66,6 +58,6 @@ export const Popular: FC<PopularProps> = () => {
           </svg>
         </Link>
       </div>
-    </div>
+    </motion.div>
   );
 };

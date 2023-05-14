@@ -1,12 +1,13 @@
 import Input from "components/Input/Input";
 import MyButton from "components/myBytton/myButton";
-import { FC } from "react";
-import "./Form.scss";
-interface FormProps {}
+import { FC, forwardRef } from "react";
+import { motion } from "framer-motion";
 
-const Form: FC<FormProps> = () => {
+import "./Form.scss";
+
+const Form: FC = forwardRef<HTMLFormElement>(({}, ref) => {
   return (
-    <form className="form">
+    <form ref={ref} className="form">
       <div className="form__input">
         <Input placeholder="Ваше имя" secondary error={false} />
       </div>
@@ -30,6 +31,6 @@ const Form: FC<FormProps> = () => {
       </p>
     </form>
   );
-};
-
+});
+export const MForm = motion(Form);
 export default Form;

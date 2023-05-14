@@ -3,7 +3,7 @@ import "./Question.scss";
 import branch from "./Assets/branch.png";
 import pink from "./Assets/pink.png";
 import green from "./Assets/green.png";
-import Form from "../Form/Form";
+import { MForm } from "../Form/Form";
 import ph1 from "./Assets/1.png";
 import ph2 from "./Assets/2.png";
 import ph3 from "./Assets/3.png";
@@ -45,24 +45,60 @@ export const Question: FC = () => {
               обратной связи, и наш специалист свяжется с вами в течение 15
               минут.
             </motion.div>
-            <Form />
+
+            <MForm custom={{ x: 300, delay: 3 }} variants={plateAnim} />
           </div>
         </div>
       </motion.div>
-      <div className="inst">
+      <motion.div
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        className="inst"
+      >
         <div className="inst__container">
           <div className="inst__row">
-            <img src={ph1} alt="ph" />
-            <img src={ph2} alt="ph" />
-            <img src={ph3} alt="ph" />
-            <img src={ph4} alt="ph" />
-            <div className="inst__photo-back">instagram</div>
+            <motion.img
+              custom={{ y: 300, delay: 1 }}
+              variants={plateAnim}
+              src={ph1}
+              alt="ph"
+            />
+            <motion.img
+              custom={{ y: 300, delay: 2 }}
+              variants={plateAnim}
+              src={ph2}
+              alt="ph"
+            />
+            <motion.img
+              custom={{ y: 300, delay: 3 }}
+              variants={plateAnim}
+              src={ph3}
+              alt="ph"
+            />
+            <motion.img
+              custom={{ y: 300, delay: 4 }}
+              variants={plateAnim}
+              src={ph4}
+              alt="ph"
+            />
+            <motion.div
+              custom={{ x: -300, delay: 2 }}
+              variants={plateAnim}
+              className="inst__photo-back"
+            >
+              instagram
+            </motion.div>
           </div>
-          <div className="inst__links">
+          <motion.div
+            custom={{ x: 300, delay: 5 }}
+            variants={plateAnim}
+            className="inst__links"
+          >
             <SocialMediaLinks gap={30} />
-          </div>
+          </motion.div>
         </div>
-      </div>
+      </motion.div>
     </>
   );
 };
